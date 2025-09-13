@@ -96,7 +96,7 @@ class OCTRawData:
         # find the index of maximum rise for each column in the derivative:
         # the +1 at the end is just to square this with Justin's code;
         # ideally, get rid of the +1 here and add back the zero-centering below
-        max_rise_index = np.argsort(fbg_region_derivative,axis=0)[-1,:].astype(np.int)+1
+        max_rise_index = np.argsort(fbg_region_derivative,axis=0)[-1,:].astype(int)+1
 
         # zero-center the max_rise_index to avoid rolling more than we need to;
         # this departs a bit from Justin's approach, but not consequentially
